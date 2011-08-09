@@ -6,6 +6,7 @@ This simple set of connector classes allows Guice dependency injection to be use
 Example
 -------
 When creating Restlet ServerResources I really want to do something like this:
+
 ```java
 public class HelloResource extends ServerResource {
 	
@@ -17,9 +18,11 @@ public class HelloResource extends ServerResource {
 	...
 }
 ```
+
 and have Guice inject my dependencies on an IHelloServiceProvider implementation and a configuration string tagged "Greeting" for me.
 
 Moreover, I want to bind my resources to URIs using the same Guice modules that I use to bind dependencies (just like the guice-servlet extension lets me do with plain old javax servlets) like this:
+
 ```java
 public class MyRoutingModule extends AbstractModule {
 	protected void configure() {
